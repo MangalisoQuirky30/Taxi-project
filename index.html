@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>iTAXI</title>
+</head>
+<body>
+    <div class="logo-page">
+        <div class="logo-page-container">
+            <div class="logo-page-image-container">
+                <img src="IMG/icon-logo.png" class="logo-page-image__img" id="logo">
+            </div>
+            <div class="logo-page-buttons-container">
+                <div class="logo-page-buttons-driver">
+                    <button type="button"  class="logo-page-buttons-driver__btn" id="driver_btn">driver</button>
+                </div>
+                <div class="logo-page-buttons-passenger">
+                    <button type="button"  class="logo-page-buttons-passenger__btn"  id="passenger_btn">passenger</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-page user-pass">
+        <div class="form-section">
+            <div class="form-section-btn-container">
+                <div class="form-section-btn-sign-up">
+                    <button type="button"  class="pass-form-section-btn-sign-up__btn">
+                        Sign Up
+                        <hr class="pass-form-section-btn-sign-up__hr">
+                    </button>
+                </div>
+                <button onclick="location.reload()" class="reloadBtn"> <img src="IMG/icon-refresh.png" class="reloadBtnImg" alt=""> </button>
+                
+                <div class="form-section-btn-sign-in">
+                    <button type="button"   class="pass-form-section-btn-sign-in__btn">
+                        Sign In
+                        <hr class="pass-form-section-btn-sign-in__hr">
+                    </button>
+                </div>
+            </div>
+            <div class="form-section-form-container">
+                <h3 class="driver-or-passenger"></h3>
+                <form class="form-section-sign-up-form" id="passSUForm">
+                    <ul class="errors-p-su"></ul>
+                    
+                    <div class="form-section-sign-up-form-name">
+                        <input type="text"  class="form-section-sign-up-form-name__input" id="pass-name-su"  placeholder="username">
+                    </div>
+                    <div class="form-section-sign-up-form-email">
+                        <input type="email" id="pass-email-su" class="form-section-sign-up-form-email__input" placeholder="name@example.com">
+                    </div>
+                    <div class="form-section-sign-up-form-password">
+                        <input type="password" id="pass-password-su" class="form-section-sign-up-form-password__input" placeholder="password">
+                    </div>
+                    <div class="form-section-sign-up-form-password">
+                        <input type="password" id="pass-cpassword-su" class="form-section-sign-up-form-password__input" placeholder="confirm-password">
+                    </div>
+                    <div class="form-section-sign-up-form-submit">
+                        <button type="submit"  id="pass-submit-su" class="form-section-sign-up-form-submit__btn">Sign Up</button>
+                    </div>
+                </form>
+
+
+                <form class="form-section-sign-in-form"  id="passSIForm">
+                    <ul class="errors-p-si"></ul>
+                    <p class="pass-success-si"></p>
+                    <div class="form-section-sign-in-form-email">
+                        <input type="email" id="pass-email-si" class="form-section-sign-in-form-email__input" placeholder="name@example.com">
+                    </div>
+                    <div class="form-section-sign-in-form-password">
+                        <input type="password" id="pass-password-si" class="form-section-sign-in-form-password__input" placeholder="password">
+                    </div>
+                    <div class="form-section-sign-in-form-submit">
+                        <button type="submit"  id="pass-submit-si" class="form-section-sign-in-form-submit__btn">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-page user-driver">
+            <div class="form-section">
+                <div class="form-section-btn-container">
+                    <div class="form-section-btn-sign-up">
+                        <button type"button"  class="driver-form-section-btn-sign-up__btn">
+                            Sign Up
+                            <hr class="driver-form-section-btn-sign-up__hr">
+                        </button>
+                    </div>
+                    <button onclick="location.reload()" class="reloadBtn"> <img src="IMG/icon-refresh.png" class="reloadBtnImg" alt=""> </button>
+                    <div class="form-section-btn-sign-in">
+                        <button type"button"   class="driver-form-section-btn-sign-in__btn">
+                            Sign In
+                            <hr class="driver-form-section-btn-sign-in__hr">
+                        </button>
+                    </div>
+                </div>
+                <div class="form-section-form-container">
+                    <h3 class="driver-or-passenger-d"></h3>
+                    
+
+
+                   
+                    <form class="form-section-sign-up-form" id="driverSUForm">
+                        <ul class="errors-d-su"></ul>
+                       
+                        <div class="form-section-sign-up-form-name">
+                            <input type="text"  class="form-section-sign-up-form-name__input" id="driver-name-su"  placeholder="First Name and Last Name">
+                        </div>
+                        <div class="form-section-sign-up-form-email">
+                            <input type="email" id="driver-email-su" class="form-section-sign-up-form-email__input" placeholder="name@example.com">
+                        </div>
+                        <div class="form-section-sign-up-form-name">
+                            <input type="tel"  class="form-section-sign-up-form-name__input" id="driver-phone-su"  placeholder="Phone number">
+                        </div>
+                        <div class="form-section-sign-up-form-name">
+                            <input type="text"  class="form-section-sign-up-form-name__input" id="driver-plate-su"  placeholder="Number Plate">
+                        </div>
+                        <div class="form-section-sign-up-form-name">
+                            <input type="number"  class="form-section-sign-up-form-name__input" id="driver-sitNum-su"  placeholder="Number of seats">
+                        </div>
+                        <div class="form-section-sign-up-form-name">
+                            <input type="tel"  class="form-section-sign-up-form-name__input" id="driver-idnumber-su"  placeholder="ID number">
+                        </div>
+
+                        <select name="taxi-ranks" style="height : 40px" id="taxi-rank-list" value="Taxi Rank" class="form-section-sign-up-form-name__input" style="height: 30px; border-radius:20px;">
+                            <option value="">Taxi Rank</option>
+                        </select>
+
+
+                        <div class="form-section-sign-up-form-password">
+                            <input type="password" id="driver-password-su" class="form-section-sign-up-form-password__input" placeholder="password">
+                        </div>
+                        <div class="form-section-sign-up-form-password">
+                            <input type="password" id="driver-cpassword-su" class="form-section-sign-up-form-password__input" placeholder="confirm-password">
+                        </div>
+                        <div class="form-section-sign-up-form-submit">
+                            <button type="submit"  id="driver-submit-su" class="driver-form-section-sign-up-form-submit__btn">Sign Up</button>
+                        </div>
+
+                    </form>
+    
+                    
+                    <form class="form-section-sign-in-form"  id="driverSIForm">
+                        <ul class="errors-d-si"></ul>
+                        <p class="driver-success-si"></p>
+                        <div class="form-section-sign-in-form-email">
+                            <input type="email" id="driver-email-si" class="form-section-sign-in-form-email__input" placeholder="name@example.com">
+                        </div>
+                        <div class="form-section-sign-in-form-password">
+                            <input type="password" id="driver-password-si" class="form-section-sign-in-form-password__input" placeholder="password">
+                        </div>
+                        <div class="form-section-sign-in-form-submit">
+                            <button type="submit"  id="driver-submit-si" class="driver-form-section-sign-in-form-submit__btn">Sign In</button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+    
+    
+        </div>
+
+    <!-- <script src="passenger/JS/index.js"></script> -->
+    <script src="JS/index/user.js"></script>
+    <script src="JS/index/ui.js"></script>
+    <script src="JS/index/app.js"></script>
+</body>
+</html>

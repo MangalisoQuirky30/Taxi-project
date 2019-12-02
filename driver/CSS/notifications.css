@@ -1,0 +1,26 @@
+#notifications {
+    padding: 0 30px;
+}
+.notifications-img {
+    background-color: #fff;
+}
+
+.heading {
+    font-size: 50px;
+    color : grey;
+    padding-top : 20px;
+}
+
+.notifications-item {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ background-color: rgba(128, 128, 128, 0.31);
+ padding : 10px;
+ margin : 10px 0;
+}
+
+.icon {
+    width : 30px;
+    margin-right: 10px;;
+}

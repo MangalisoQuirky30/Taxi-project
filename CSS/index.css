@@ -1,0 +1,338 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline : none;
+    transition : .5s all ;
+}
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family : arial ;
+}
+errors
+
+input:focus {
+    outline: none !important;
+    border:1px solid #f5cf37;
+}
+
+/* LOGO PAGE */
+
+.logo-page {
+    height : 100vh;
+    background-image: linear-gradient(to top, #f5cf37 15% , white 15% ) ;
+}
+
+.logo-page-container {
+    width : 400px; 
+    display : block ;
+    margin : 0 auto ;
+    padding-top : 10vh ;
+    text-align : center ;
+}
+
+.logo-page-image-container {
+    /* /width : 150px;   */
+    display : block ;
+    margin : 0 auto ;
+    background-color: white;
+    /* border-radius: 100%;  */
+    /* box-shadow : 0 10px 3px rgba(0, 0, 0, 0.703) ; */
+}
+
+.logo-page-image__img {
+    width : 100% ;
+    padding: 10px;
+    display: block ;
+}
+
+.logo-page-text-container {
+    width : 100% ;
+    margin-top : 10px ;
+}
+
+.logo-page-text__heading {
+    font-size : 60px ;
+    color : white ;
+    letter-spacing : 10px;
+    font-weight : lighter ;
+}
+
+
+.logo-page-buttons-container {
+    display : block ;
+    justify-content : center;
+    text-align: center ;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px; 
+    margin-top : 50px;
+}
+
+.logo-page-buttons-driver ,
+.logo-page-buttons-passenger {
+    width: 200px; 
+    margin :  20px auto ;
+}
+
+
+.logo-page-buttons-driver__btn ,
+.logo-page-buttons-passenger__btn {
+    text-decoration:  none;
+    font-weight : bold ;
+    font-size : 20px;
+    padding : 10px 15px ;
+    border-radius: 20px;
+    text-transform: capitalize ;
+    letter-spacing : 5px;
+    display : block ;
+    margin : 0 auto ;
+    border : none;
+    width : 100%;
+
+}
+
+.logo-page-buttons-driver__btn  {
+    color : black;
+    background-color: #f5cf37;
+}
+
+.logo-page-buttons-passenger__btn {
+    color : #f5cf37;
+    background-color: black;
+}
+
+.logo-page-buttons-driver__btn:hover  {
+    color : #f5cf37;
+    background-color: black;
+}
+
+.logo-page-buttons-passenger__btn:hover {
+    color : black;
+    background-color: #f5cf37;
+}
+
+
+
+
+
+/* SIGN UP / SIGN IN FORMS */
+
+.form-page {
+    height : 320px;
+    display : none;
+}
+
+.form-section {
+    background-color: white;
+    width : 90% ;
+    display : block; 
+    margin: 0 auto ;
+    border-radius:   20px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.231);
+     /* transform : translateY(-85px) ; leave this for javascript after a klick */
+}
+
+.form-section-btn-container {
+    display: flex;
+    padding : 10px;
+    align-items: center;
+    border-bottom:  1px solid #ccc;
+}
+
+.form-section-btn-sign-up ,
+.form-section-btn-sign-in {
+    width : 50%;
+    text-align: center;
+    padding : 10px;
+}
+
+
+
+.pass-form-section-btn-sign-up__btn ,
+.pass-form-section-btn-sign-in__btn ,
+.driver-form-section-btn-sign-up__btn ,
+.driver-form-section-btn-sign-in__btn{
+    text-decoration: none;
+    color: black;
+    font-size : 25px;
+    font-weight : bold;
+    border : none;
+    background-color: white ;
+}
+
+ .pass-form-section-btn-sign-up__hr ,
+ .driver-form-section-btn-sign-up__hr  {
+    width : 80px ;
+}
+ .pass-form-section-btn-sign-in__hr ,
+ .driver-form-section-btn-sign-in__hr {
+    width : 40px ;
+}
+
+
+
+.pass-form-section-btn-sign-in__btn ,
+.form-section-btn-sign-in__btn{
+    color : grey;
+}
+
+.pass-form-section-btn-sign-up__btn ,
+.driver-form-section-btn-sign-up__btn{
+    color : black;
+}
+
+.pass-form-section-btn-sign-up__hr ,
+.pass-form-section-btn-sign-in__hr ,
+.driver-form-section-btn-sign-up__hr ,
+.driver-form-section-btn-sign-in__hr {
+    border : none;
+    height : 8px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 25px;
+}
+.pass-form-section-btn-sign-in__hr ,
+.driver-form-section-btn-sign-in__hr {
+    background-color : #ccc;
+
+}
+
+.pass-form-section-btn-sign-up__hr ,
+.driver-form-section-btn-sign-up__hr {
+    background-color : #f5cf37;
+}
+
+.form-section-btn-sign-up__btn:hover  ,
+.form-section-btn-sign-in__btn:hover {
+    
+    background-color : #000;
+    color : #f5cf37;
+}
+
+.driver-or-passenger ,
+.driver-or-passenger-d {
+    color: black;
+    font-size : 25px;
+    font-weight : bold;
+    border : none;
+    background-color: #f5cf37 ;
+    text-align: center;
+    padding : 20px;
+    display: block;
+}
+
+
+.form-section-form-container {
+}
+
+.form-section-sign-up-form ,
+.form-section-sign-in-form {
+    width : 90%;
+    margin : 0 auto;
+    padding : 40px 0;
+}
+
+.form-section-sign-in-form {
+    display: none;
+}
+
+.form-section-sign-up-form {
+    display: block;
+}
+
+.form-section-sign-up-form-name__input ,
+.form-section-sign-up-form-email__input ,
+.form-section-sign-up-form-password__input ,
+.form-section-sign-up-form-submit__btn {
+    width : 100% ;
+    margin-bottom : 10px;
+    padding : 10px;
+    border : 1px solid #ccc ;
+    border-radius : 10px;
+}
+
+.form-section-sign-in-form-name__input ,
+.form-section-sign-in-form-email__input ,
+.form-section-sign-in-form-password__input ,
+.form-section-sign-in-form-submit__btn {
+    width : 100% ;
+    margin-bottom : 10px;
+    padding : 10px;
+    border : 1px solid #ccc ;
+    border-radius : 10px;
+}
+
+.form-section-sign-up-form-submit__btn ,
+.form-section-sign-in-form-submit__btn ,
+.driver-form-section-sign-up-form-submit__btn ,
+.driver-form-section-sign-in-form-submit__btn {
+    border-radius : 10px;
+    width : 100% ;
+    margin-top : 20px;
+    padding : 15px 10px;
+    border : 1px solid #ccc ;
+    background-color : #f5cf37;
+    font-size: 15px;
+
+}
+
+
+
+.pass-success-si ,
+.driver-success-si {
+    margin : 20px 0;
+    color: green;
+}
+
+.errors-p-su li ,
+.errors-d-su li {
+    list-style-type: none;
+    margin : 20px 0;
+    color: red;
+}
+
+.errors-p-si li ,
+.errors-d-si li {
+    list-style-type: none;
+    margin : 20px 0;
+    color: red;
+}
+
+
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.reloadBtn {
+    border: 1px solid #f5cf37;
+    background-color: #00000000;
+    padding : 10px;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.reloadBtn:hover .reloadBtnImg{
+    animation: rotateIcon 1s infinite linear;
+
+}
+
+
+
+/* .label {
+    opacity: 0;
+}
+
+#driver-name-su:focus .label {
+    opacity: 1;
+} */
+
+
+/* ........ */

@@ -1,0 +1,150 @@
+
+
+
+.route-updates{
+    margin : 0 auto;
+    text-align: center;
+    padding : 0 10px;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+.trip-details .trip-error {
+    color : red;
+}
+
+.normalBtn{
+    text-decoration: none;
+    font-size : 25px;
+    font-weight : bold;
+    border : 2px solid black;
+    color: black;
+    background-color: #f5cf37;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.normalBtn:hover {
+    
+    background-color : #000;
+    color : #f5cf37;
+}
+
+
+#driver-updates select {
+    width :300px ;
+    margin-bottom : 10px;
+    padding : 10px;
+    border-radius : 10px;
+}
+
+.menu-btn {
+    background-color: #f5cf37;
+}
+
+.home-img {
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 960px) {
+    .home-page-top {
+     display: none;
+    }
+    
+    .home-navigation-container {
+        display: block;
+    }
+}
+
+
+
+@media only screen and (min-width: 960px) {
+    .home-page-top {
+        display: block;
+       }
+    .home-navigation-container {
+        display: none; 
+    }
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.label-select {
+    padding : 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sbmt-btn {
+    margin : 30px;
+}
+.label-select-cont .label-select{
+    margin: 0 20px;
+}
+.label-select-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.label-select label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color : grey
+}
+.label-select select , .label-select span {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+#price , #total-price {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#location , #destination{
+    border : 2px solid black;
+}
+
+.heading-text-t {
+    font-size: 50px;
+    color : grey;
+    padding: 20px;
+    text-align: left;
+}
+.heading-text-p {
+    font-size: 50px;
+    color : grey;
+    text-align: left;
+
+}
+
+.prices label {
+    font-size: 20px;
+}
+.prices {
+    border-radius: 10px;
+    background-color: rgba(204, 204, 204, 0.582);
+}
+
+.booking-list li{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.trip-details i{
+    font-size: 20px;
+    margin: 10px;
+    display: block; 
+    color : gray;
+
+}
+
+
+.buttons .normalBtn {
+    margin: 20px;
+}

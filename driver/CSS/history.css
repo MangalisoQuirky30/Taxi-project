@@ -1,0 +1,74 @@
+.history-img {
+    background-color: #fff;
+}
+
+.heading {
+    font-size: 50px;
+    color : grey;
+    padding-top : 20px;
+}
+
+.history {
+    padding: 0 30px;
+}
+
+.all-trips {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top : 20px;
+    border-radius: 30px;
+}
+
+.trip {
+    border-radius: 30px;
+    background-color: #fff;
+    width : 200px;
+    padding : 10px;
+    margin : 20px;
+}
+
+.from-cont ,
+.to-cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin : 10px;
+}
+
+.from-icon ,
+.to-icon ,
+.total-icon{
+    width : 30px;
+    margin-right : 20px;
+}
+
+.from , .to {
+    font-size: 20px;
+    color : black;
+}
+.total {
+    font-size: 20px;
+    color : #f5cf37;
+}
+
+.R {
+    color : #f5cf37 ;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.total-cont {
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin : 10px ;
+    background-color: grey;
+    padding: 5px;
+    border-radius: 10px;
+}
