@@ -403,7 +403,7 @@ input:focus {
     }
     50% {
         transform: translateY(0px);
-        margin-bottom: 3px;
+        margin-bottom: 5px;
     }
     100% {
         transform: translateY(5px);
