@@ -412,15 +412,20 @@ input:focus {
 }
 
 .reloadBtn {
-    border: 2px solid #000;
+    border : none;
     background-color: #fff; 
     border-radius: 100px;
+    padding: 10px;
 }
 
 .reloadBtn:hover .reloadBtnImg {
     animation: rotateIcon 1s infinite linear;
-
 }
+
+.reloadBtn:hover  {
+    box-shadow: 2px 2px 4px black;
+}
+
 
 
 
