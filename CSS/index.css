@@ -127,7 +127,6 @@ input:focus {
     animation-name: buttonsMove;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-delay: 3s;
     font-weight : 900;
 }
 
