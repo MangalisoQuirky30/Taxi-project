@@ -66,7 +66,7 @@ User.prototype = {
                 console.log("found driver.... null not null");
                 if(allDrivers[i].location.length  && allDrivers[i].destination.length ){
                     selectors.seatsLeft.innerHTML = allDrivers[i].dSeatsNumber + " seats left" 
-                    selectors.timeLeft.innerHTML = allDrivers[i].time + " mins left" 
+                    selectors.timeLeft.innerHTML = parseInt(parseInt(allDrivers[i].dSeatsNumber) * 1.5) + " mins left" 
                     selectors.lctn.innerHTML = "Currently at " +  allDrivers[i].location 
                     selectors.dstntn.innerHTML = "Going to " + allDrivers[i].destination
                     selectors.driverUpdatesForm.style.display = 'none'
@@ -500,7 +500,7 @@ User.prototype = {
                 time : time
             }
             console.log(d.dBookings)
-            if(d.dBookings.length){
+            if(d.dBookings.length == d.dAllSeats ){
                 for(var i = 0; i < extPss.length ; i++){
                     for(var x = 0; x < d.dBookings.length ; x++){
                         if(extPss[i].pName === d.dBookings[x]){
@@ -518,7 +518,7 @@ User.prototype = {
                 d.location = ''
                 d.destination = ''
                 d.time = ""
-                d.dSeatsNumber = d.dAllSeats
+                d.dSeatsNumber = parseInt(d.dAllSeats)
                 d.price = ""
                 d.distance = ""
                 d.dTripsHistory.push(newTrip)
@@ -528,10 +528,11 @@ User.prototype = {
                 window.location.reload()
             } else if(d.dBookings.length === 0) {
                 selectors.tripError.innerHTML = "You do not have any bookings. Cancel trip?"
+             } 
+             else if(d.dBookings.length < d.dSeatsNumber ) {
+                selectors.tripError.innerHTML = "You are not fully booked. Cancel trip?"
              }
-             //else if(d.dBookings.length < d.dAllSeats) {
-            //     selectors.tripError.innerHTML = "Your taxi is not fully booked yet"
-            // }
+            
         }
     })
 

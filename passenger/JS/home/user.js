@@ -10,7 +10,6 @@ User.prototype = {
     
 
     init : function(selectors){
-        console.log(selectors.taxisAtRankList)
         var date = new Date();
         var token = date.getTime() ;
         var exstToken = JSON.parse(localStorage.getItem("ptoken"));
@@ -25,14 +24,11 @@ User.prototype = {
             window.location.href = "../index.html"
         }
 
-        console.log("0" + newHour + ":" + newMin + "  " + "0" + oldHour + ":" + oldMin)
 
         if ( newHour > oldHour && newMin > oldMin){
-            console.log("it has been longer than an hour")
             localStorage.removeItem('ptoken')
             window.location.href = "../index.html"
         } else {
-            console.log("it has not been more than an hour yet, user can stay.")
         }
 
         selectors.rankPage.style.display = "none"
