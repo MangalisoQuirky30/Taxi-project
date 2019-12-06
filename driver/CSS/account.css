@@ -8,7 +8,7 @@
     display: block;
     margin: 20px auto;
     border-radius: 100%;
-    background-color: #000;
+    background-color: #fff;
     width : 100%;
     height : auto;
     padding : 10px;
@@ -27,6 +27,9 @@
     font-size : 50px;
     padding: 0 30px;
     padding-top : 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 
@@ -192,7 +195,9 @@
 }
 
 
-
+label {
+    font-weight: bold;
+}
 .pass-success-si ,
 .driver-success-si {
     margin : 20px 0;
@@ -214,3 +219,6 @@
 }
 
 
+.nav-account {
+    background-color: #fff;
+}

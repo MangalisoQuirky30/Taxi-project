@@ -26,23 +26,33 @@ User.prototype = {
 
         for(var i = 0 ; i < allDrivers.length ; i++){
             if(allDrivers[i].dEmail === driEml){
-                for(var x = 0 ; x < allDrivers[i].dTripsHistory.length ; x++ ){
-                    selectors.allTrips.innerHTML += `<li class="trip">
-                    <div class="from-cont">
-                        <img src="IMG/icon-taxi-location.png" alt="icon-location-from" class="from-icon">
-                        <span class="from">${allDrivers[i].dTripsHistory[x].from}</span>
-                    </div>
-                    <div class="to-cont">
-                        <img src="IMG/icon-navigation.png" alt="icon-location-to" class="to-icon">
-                        <span class="to">${allDrivers[i].dTripsHistory[x].to}</span>
-                    </div>
-                    <hr>
-                    <div class="total-cont">
-                        <img src="IMG/icon-money-bag.png" alt="icon-total" class="total-icon">
-                        <span class="R">R <span class="total">${allDrivers[i].dTripsHistory[x].cash}</span></span>
-                    </div>
-                </li>`
+
+                
+                if(allDrivers[i].displayPictureSrc){
+                    selectors.driverDPMob.src = allDrivers[i].displayPictureSrc
+                } else {
+                    selectors.driverDPMob.src = "IMG/driver.jpg"
                 }
+                
+                if(allDrivers[i].dTripsHistory){
+                    for(var x = 0 ; x < allDrivers[i].dTripsHistory.length ; x++ ){
+                        selectors.allTrips.innerHTML += `<li class="trip">
+                        <div class="from-cont">
+                            <img src="IMG/icon-taxi-location.png" alt="icon-location-from" class="from-icon">
+                            <span class="from">${allDrivers[i].dTripsHistory[x].from}</span>
+                        </div>
+                        <div class="to-cont">
+                            <img src="IMG/icon-navigation.png" alt="icon-location-to" class="to-icon">
+                            <span class="to">${allDrivers[i].dTripsHistory[x].to}</span>
+                        </div>
+                        <div class="total-cont">
+                            <span class="R"><span class="total">R${allDrivers[i].dTripsHistory[x].cash}</span></span>
+                        </div>
+                    </li>`
+                    } 
+                } else {
+                    selectors.allTrips.innerHTML = '<p>You do not have a history record. Start your first trip?</p>'
+                } 
             }
         }
 

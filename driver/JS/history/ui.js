@@ -15,9 +15,10 @@ function UI(){
         
         accBalance : document.querySelector(".acc-balance") ,
         accBalanceMob : document.querySelector(".acc-balance-mob") ,
-        driverDP : document.querySelector(".driver-dp") ,
 
         routeUpdates : document.querySelector(".history") ,
+        driverDPMob : document.querySelector(".driver-dp") ,
+
         
         dLogoutBtnMob : document.getElementById("logout-driver-mobile") ,
         dLogoutBtn : document.getElementById("logout-driver") , 

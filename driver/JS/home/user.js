@@ -28,9 +28,6 @@ User.prototype = {
             window.location.href = "../index.html"
         } 
 
-       
-
-
         //this code prints the logged in user's name on the dashboard
        var driEml = window.location.search.substr(1).replace("%40" , "@").split("+")
        selectors.driverEmail.value = driEml[0]
@@ -59,6 +56,12 @@ User.prototype = {
             if(allDrivers[i].dEmail == driEml[0]){
                 selectors.accBalanceMob.innerHTML = " R" + allDrivers[i].AccBalance
                 selectors.accBalance.innerHTML = " R" + allDrivers[i].AccBalance
+
+                if(allDrivers[i].displayPictureSrc){
+                    selectors.driverDPMob.src = allDrivers[i].displayPictureSrc
+                } else {
+                    selectors.driverDPMob.src = "IMG/driver.jpg"
+                }
                 
                 console.log("found driver.... null not null");
                 if(allDrivers[i].location.length  && allDrivers[i].destination.length ){
@@ -80,19 +83,22 @@ User.prototype = {
             }
         }
 
-        var loggedDriver = allDrivers.map(function(driver){
-            if(driver.dEmail === this.crrntDrvrEml){
+        var drivEml = this.crrntDrvrEml
+        var loggedDriver = allDrivers.filter(function(driver){
+            console.log(drivEml)
+            if(driver.dEmail === drivEml){
                 console.log(driver.dEmail[0])
                 console.log(" found driver");
                 return driver
             }   
         })
         console.log(allDrivers)
-        var allBookings = loggedDriver.dBookings
+        var allBookings = loggedDriver[0].dBookings
         //
-        console.log(loggedDriver)
+        console.log(loggedDriver[0])
 
         for(var i = 0 ; i < allBookings.length ; i++){
+            console.log(allBookings[i])
             selectors.bookingList.innerHTML += `<li class="booking-name">${allBookings[i]}</li>`
         }
 
@@ -100,16 +106,27 @@ User.prototype = {
         
         
         for(var i = 0 ; i < allDrivers.length ; i++){
-            if(allDrivers[i].dEmail === this.crrntDrvrEml){
-                if( allDrivers[i].AccBalance)
-                selectors.accBalanceMob.innerHTML = " R" + allDrivers[i].AccBalance
-                selectors.accBalance.innerHTML = " R" + allDrivers[i].AccBalance
-                //selectors.driverDP.src = allDrivers[i].DisplayPictureSrc
-            } else if ( !allDrivers[i].AccBalance ){
-                selectors.accBalanceMob.innerHTML = " R 0"
-                selectors.accBalance.innerHTML = " R 0"
+            if(allDrivers[i].dEmail === drivEml){
+                console.log(allDrivers[i].AccBalance , drivEml)
+                if( allDrivers[i].AccBalance > 0){
+                    console.log("MOENY   " , allDrivers[i].dEmail)
+                    console.log(allDrivers[i].AccBalance , drivEml)
+                    selectors.accBalanceMob.innerHTML = `R ${allDrivers[i].AccBalance}`
+                    console.log( `R ${allDrivers[i].AccBalance}` ,  allDrivers[i].dEmail );
+                    
+                    selectors.accBalance.innerHTML = " R" + allDrivers[i].AccBalance
+                    //selectors.driverDP.src = allDrivers[i].DisplayPictureSrc
+    
+                }     else {
+                    console.log("NO MOENY   " , allDrivers[i].dEmail)
+                    selectors.accBalanceMob.innerHTML = " R 0"
+                    selectors.accBalance.innerHTML = " R 0"
+                    allDrivers[i].AccBalance = 0
+                    localStorage.setItem('drivers' , JSON.stringify(allDrivers))
+                }
+                
             }
-            
+        
         }
     
 
@@ -467,6 +484,8 @@ User.prototype = {
         var extDrv = JSON.parse(localStorage.getItem("drivers"))
         var extPss = JSON.parse(localStorage.getItem("passengers"))
        var driEml = this.crrntDrvrEml
+       var d = new Date()
+       var time = d.getHours() + ":" + d.getMinutes()
 
        extDrv.map(function(d){
             d.Account 
@@ -477,14 +496,16 @@ User.prototype = {
             var newTrip = {
                 from : d.location ,
                 to : d.destination ,
-                cash : d.total
+                cash : d.total,
+                time : time
             }
             console.log(d.dBookings)
             if(d.dBookings.length){
                 for(var i = 0; i < extPss.length ; i++){
                     for(var x = 0; x < d.dBookings.length ; x++){
                         if(extPss[i].pName === d.dBookings[x]){
-                            if(!extPss[i].pTripsHistory){
+                            if(extPss[i].pTripsHistory == null || extPss[i].pTripsHistory == null  ){
+                                console.log("word up to my girls")
                                 extPss[i].pTripsHistory = []
                             }
                             extPss[i].pBookings = ''

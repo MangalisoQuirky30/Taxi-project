@@ -6,12 +6,19 @@
     font-size: 50px;
     color : grey;
     padding-top : 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .history {
     padding: 0 30px;
 }
-
+.R {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+}
 .all-trips {
     background-color: #ccc;
     display: flex;
@@ -20,13 +27,19 @@
     flex-wrap: wrap;
     margin-top : 20px;
     border-radius: 30px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.476);
+    padding: 10px;
 }
 
+.trip:hover {
+    background-color: #f5cf37;
+}
 .trip {
     border-radius: 30px;
     background-color: #fff;
     width : 200px;
     padding : 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.476);
     margin : 20px;
 }
 
@@ -42,16 +55,20 @@
 .to-icon ,
 .total-icon{
     width : 30px;
-    margin-right : 20px;
+    margin-right : 5px;
 }
 
 .from , .to {
-    font-size: 20px;
+    font-size: 13px;
     color : black;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .total {
     font-size: 20px;
     color : #f5cf37;
+    text-align: center;
+    display: inline;
 }
 
 .R {
@@ -67,8 +84,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin : 10px ;
+    margin : 10px auto;
     background-color: grey;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 100px;
+    width : 60px;
+    height : 60px;
 }

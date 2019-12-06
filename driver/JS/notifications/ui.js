@@ -15,7 +15,8 @@ function UI(){
         notificationsList : document.querySelector(".notifications-list") ,
         
         routeUpdates : document.querySelector("#notifications") ,
-        driverDP : document.querySelector(".driver-dp") ,
+        driverDPMob : document.querySelector(".driver-dp") ,
+
         accBalance : document.querySelector(".acc-balance") ,
         accBalanceMob : document.querySelector(".acc-balance-mob") ,
 

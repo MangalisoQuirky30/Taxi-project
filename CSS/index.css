@@ -72,7 +72,7 @@ input:focus {
 
 .logo-page-buttons-driver ,
 .logo-page-buttons-passenger {
-    width: 200px; 
+    width: 250px; 
     margin :  20px auto ;
 }
 
@@ -82,7 +82,7 @@ input:focus {
     text-decoration:  none;
     font-weight : bold ;
     font-size : 20px;
-    padding : 10px 15px ;
+    padding : 10px 20px ;
     border-radius: 20px;
     text-transform: capitalize ;
     letter-spacing : 5px;
@@ -90,27 +90,80 @@ input:focus {
     margin : 0 auto ;
     border : none;
     width : 100%;
-
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.517);
 }
+
+
+
+
+
+
+
+@keyframes buttonsMove {
+    0% {
+        transform: translateX(-1px);        
+    }
+    25% {
+        transform: translateX(1px);        
+    }
+    50% {
+        transform: translateY(-1px);        
+    }
+    75% {
+        transform: translateY(1px);        
+    }
+    100% {
+        transform: translateX(-1px);        
+    }
+}
+
+
+
+
 
 .logo-page-buttons-driver__btn  {
     color : black;
     background-color: #f5cf37;
+    animation-name: buttonsMove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    font-weight : 900;
 }
 
 .logo-page-buttons-passenger__btn {
     color : #f5cf37;
     background-color: black;
+    animation-name: buttonsMove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-direction: reverse;
+    font-weight : 900;
 }
 
 .logo-page-buttons-driver__btn:hover  {
     color : #f5cf37;
     background-color: black;
+    transform: translateY(-3px);
 }
+.logo-page-buttons-driver__btn:active  {
+    color : #f5cf37;
+    background-color: black;
+    transform: translateY(-1px);
+}
+
+
 
 .logo-page-buttons-passenger__btn:hover {
     color : black;
     background-color: #f5cf37;
+    transform: translateY(-3px);
+}
+.logo-page-buttons-passenger__btn:active {
+    color : black;
+    background-color: #f5cf37;
+    transform: translateY(-1px);
 }
 
 
@@ -149,7 +202,6 @@ input:focus {
 }
 
 
-
 .pass-form-section-btn-sign-up__btn ,
 .pass-form-section-btn-sign-in__btn ,
 .driver-form-section-btn-sign-up__btn ,
@@ -157,11 +209,20 @@ input:focus {
     text-decoration: none;
     color: black;
     font-size : 25px;
-    font-weight : bold;
     border : none;
+    text-transform: uppercase;
     background-color: white ;
+    letter-spacing: 0px;
+    font-weight: 900;
 }
 
+.driver-form-section-sign-up-form-submit__btn  ,
+.driver-form-section-sign-in-form-submit__btn ,
+.form-section-sign-up-form-submit__btn  ,
+.form-section-sign-in-form-submit__btn {
+    letter-spacing: 5px;
+    font-weight: 900;
+}
  .pass-form-section-btn-sign-up__hr ,
  .driver-form-section-btn-sign-up__hr  {
     width : 80px ;
@@ -181,6 +242,7 @@ input:focus {
 .pass-form-section-btn-sign-up__btn ,
 .driver-form-section-btn-sign-up__btn{
     color : black;
+    text-transform: uppercase;
 }
 
 .pass-form-section-btn-sign-up__hr ,
@@ -213,14 +275,16 @@ input:focus {
 
 .driver-or-passenger ,
 .driver-or-passenger-d {
-    color: black;
-    font-size : 25px;
-    font-weight : bold;
+    color: white;
+    font-size : 50px;
+    margin: 0;
     border : none;
     background-color: #f5cf37 ;
     text-align: center;
-    padding : 20px;
+    padding : 0px;
     display: block;
+    letter-spacing: 20px;
+    font-weight: 900;
 }
 
 
@@ -249,7 +313,7 @@ input:focus {
     width : 100% ;
     margin-bottom : 10px;
     padding : 10px;
-    border : 1px solid #ccc ;
+    border : 2px solid #ccc ;
     border-radius : 10px;
 }
 
@@ -260,8 +324,18 @@ input:focus {
     width : 100% ;
     margin-bottom : 10px;
     padding : 10px;
-    border : 1px solid #ccc ;
+    border : 2px solid #ccc ;
     border-radius : 10px;
+}
+
+.form-section-sign-up-form-name__input:focus ,
+.form-section-sign-up-form-email__input:focus ,
+.form-section-sign-up-form-password__input:focus ,
+.form-section-sign-in-form-name__input:focus ,
+.form-section-sign-in-form-email__input:focus ,
+.form-section-sign-in-form-password__input:focus {
+
+    border : 2px solid #f5cf37 ;
 }
 
 .form-section-sign-up-form-submit__btn ,
@@ -270,14 +344,34 @@ input:focus {
 .driver-form-section-sign-in-form-submit__btn {
     border-radius : 10px;
     width : 100% ;
+    font-size: 20px;
+    text-transform: uppercase;
     margin-top : 20px;
     padding : 15px 10px;
-    border : 1px solid #ccc ;
     background-color : #f5cf37;
-    font-size: 15px;
+    color : #000;
+    box-shadow: 3px 3px 5px black;
+    border: unset;
 
 }
 
+
+.form-section-sign-up-form-submit__btn:hover ,
+.form-section-sign-in-form-submit__btn:hover ,
+.driver-form-section-sign-up-form-submit__btn:hover ,
+.driver-form-section-sign-in-form-submit__btn:hover {
+    border: unset;
+    background-color : #000;
+    color : #f5cf37;
+    transform: translateY(-3px);
+}
+
+.form-section-sign-up-form-submit__btn:active ,
+.form-section-sign-in-form-submit__btn:active ,
+.driver-form-section-sign-up-form-submit__btn:active ,
+.driver-form-section-sign-in-form-submit__btn:active {
+    transform: translateY(1px);
+}
 
 
 .pass-success-si ,
@@ -304,22 +398,26 @@ input:focus {
 
 @keyframes rotateIcon {
     0% {
-        transform: rotate(360deg);
+        transform: translateY(5px);
+        margin-bottom: 0px;
+    }
+    50% {
+        transform: translateY(0px);
+        margin-bottom: 3px;
     }
     100% {
-        transform: rotate(0deg);
+        transform: translateY(5px);
+        margin-bottom: 0px;
     }
 }
 
 .reloadBtn {
-    border: 1px solid #f5cf37;
-    background-color: #00000000;
-    padding : 10px;
-    border-radius: 10px;
-    height: 50px;
+    border: 2px solid #000;
+    background-color: #fff; 
+    border-radius: 100px;
 }
 
-.reloadBtn:hover .reloadBtnImg{
+.reloadBtn:hover .reloadBtnImg {
     animation: rotateIcon 1s infinite linear;
 
 }

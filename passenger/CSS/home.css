@@ -67,6 +67,9 @@ margin-bottom: 30PX;
 .home-page-nearby-taxirank-text__heading {
     font-size : 50px;
     color: grey;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 
@@ -89,14 +92,14 @@ margin-bottom: 30PX;
     HEIGHT: 100px;
     background-color: #ccc;
     margin: 20px;
-    border-radius: 25px;;
+    border-radius: 25px;
+    box-shadow: 3px 3px 5px black;
 }
-
 .home-page-nearby-taxirank-list-item:hover {
     display : flex;
     justify-content: center;
     border-bottom: 5px dashed #000;
-    width: 260px;
+    /* width: 280px; */
     HEIGHT: 100px;
     background-color: #f5cf37;
     margin: 20px;
@@ -104,23 +107,25 @@ margin-bottom: 30PX;
 
 .home-page-nearby-taxirank-list-item:hover 
 .home-page-nearby-taxirank-list-item-icon img{
-    /* margin-right: 10px; */
-    width :  40px;
+    margin-top: -10px;
+    width :  50px;
 }
 .home-page-nearby-taxirank-list-item:hover .taxi-rank-name{
-    font-size: 25px;
-    font-weight : bold;
+    font-size: 20px;
 }
 
 .home-page-nearby-taxirank-list-item-text__paragraph {
     /* //padding: 10px 500px 10px 0; */
     display: block;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .home-page-nearby-taxirank-list-item-icon__img {
     width : 30px;
     margin-right: 10PX;
+    margin-top: -5px;
 }
 
 
@@ -155,6 +160,9 @@ margin-bottom: 30PX;
 .rank-page-heading__heading {
     font-size: 50px;
     margin-bottom: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 .no-taxis {
     font-size: 20px;
@@ -171,6 +179,7 @@ padding: 10px;
 background-color: rgba(204, 204, 204, 0.486);
 border-radius: 30px;
 margin-top: 10px;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.599);
 }
 
 #cancel-booking {
@@ -193,16 +202,19 @@ margin-top: 10px;
 
 @keyframes rotateIcon {
     0% {
-        transform: rotate(360deg);
+        transform: translateX(5PX);
+    }
+    50% {
+        transform: translateX(0);
     }
     100% {
-        transform: rotate(0deg);
+        transform: translateX(5PX);
     }
 }
 
 .reloadBtn {
     border : #f5cf37 ;
-    background-color: #000;
+    background-color: grey;
     padding : 10px;
     border-radius: 10px;
 }
@@ -224,6 +236,7 @@ margin-top: 10px;
     background-color: #f5cf37;
     border-radius: 20px;
     border : none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.531);
 }
 .rank-page-details-left-icon {
     width: 80px;
@@ -256,7 +269,7 @@ margin-top: 10px;
     border-left: 2px solid black;
     border-top: 2px solid black;
 
-    padding : 20px 30px;
+    padding : 20px ;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -270,10 +283,13 @@ margin-top: 10px;
 .rank-page-driver-details img{
     
     width : 50px;
+    height :  50px ;
 }
 
 .rank-page-driver-profile-image {
     width : 50px;
+    height :  50px ;
+    margin-right : 30px
 }
 
 .rank-page-driver-profile-image__img {
@@ -400,6 +416,7 @@ background: none;
 
 .rank-page-taxi-details-image__img {
     width : 100%;
+    margin-bottom: 5px;
 }
 .rank-page-taxi-details-distance {
 
@@ -443,16 +460,18 @@ font-size : 15px;
     font-size : 15px;
     padding : 15px ;
     border-radius: 20px;
+    font-weight: bold;
     width : 40%;
     border : none;
-    background-color: black;
-    color : #f5cf37;
+    background-color: #f5cf37;
+    color : #000;
+    box-shadow : 3px 3px 5px rgba(0, 0, 0, 0.544)
 }
 
 
 .rank-page-taxi-request__btn:hover {
-    background-color: #f5cf37;
-    color : black;
+    background-color: #000;
+    color : #f5cf37;
 
  }
 
@@ -466,7 +485,12 @@ font-size : 15px;
 
 
 
-
+.view-taxi-details:hover {
+    background-color: #f5cf37a8;
+}
+.view-taxi-details {
+    font-weight: 900 ;
+}
 
 
 

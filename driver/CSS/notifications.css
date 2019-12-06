@@ -9,6 +9,9 @@
     font-size: 50px;
     color : grey;
     padding-top : 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .notifications-item {
@@ -18,9 +21,24 @@
  background-color: rgba(128, 128, 128, 0.31);
  padding : 10px;
  margin : 10px 0;
+ border-radius: 20px;
+ box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.476);
+}
+
+
+.notifications-item:hover {
+    background-color: #f5cf37;
 }
 
 .icon {
     width : 30px;
     margin-right: 10px;;
+}
+
+.time {
+    background-color: #00000050;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 10px;
+    margin-top: -5PX;
 }

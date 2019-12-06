@@ -11,14 +11,15 @@ function UI(){
         navNotificationsMob : document.querySelector(".nav-notifications-mob") ,
         navHistoryMob : document.querySelector(".nav-history-mob") ,
         navAccountMob : document.querySelector(".nav-account-mob") ,
+        taxiRanks : document.getElementById("taxi-ranks") ,
 
         
-        driverDP : document.querySelector(".driver-dp") ,
+        driverDPMob : document.querySelector(".driver-dp") ,
 
         
         routeUpdates : document.querySelector(".container22") ,
 
-
+        
         accBalance : document.querySelector(".acc-balance") ,
         accBalanceMob : document.querySelector(".acc-balance-mob") ,
         

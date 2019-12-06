@@ -87,20 +87,6 @@ User.prototype = {
         }
     } ,
 
-    searchRank : function(selectors ,e){
-        var val = e.target.value.charAt(0).toUpperCase();
-        console.log(val)
-        console.log(selectors.taxiRankName)
-        selectors.taxiRankName.forEach(function(l){
-            if(l.textContent.indexOf(val) != -1){
-                l.style.display = 'flex'
-            }else{
-                l.style.display = 'none'
-            }
-        })  
-    } ,
-
-
 
     showTaxisAtRank : function(selectors , location){
         selectors.homePage.style.display = "none"
@@ -155,10 +141,16 @@ User.prototype = {
 
         for(var i = 0 ; i < taxiDrivers.length ; i++){
             if(taxiDrivers[i].dEmail == email) {
+                var drivImage = "IMG/driver.jpg"
+
+                if(taxiDrivers[i].displayPictureSrc){
+                    drivImage = taxiDrivers[i].displayPictureSrc
+                }
+                
                 item.innerHTML = `<div class="rank-page-driver-details" id="taxi-details">
                     <div class="rank-page-driver-details-profile">
                         <div class="rank-page-driver-profile-image">
-                            <img src="IMG/user.png" alt="driver" class="rank-page-driver-profile-image__img">
+                            <img src="${drivImage}" alt="driver" class="rank-page-driver-profile-image__img">
                         </div>
                         <div class="rank-page-driver-profile-name">
                             <h3 class="rank-page-driver-profile-name__text">${taxiDrivers[i].dName} </h3> 
@@ -198,7 +190,8 @@ User.prototype = {
                 <div class="rank-page-taxi-details">
                     <div class="rank-page-taxi-details-container">
                         <div class="rank-page-taxi-details-image">
-                            <img src="IMG/icon-taxi.png" alt="Taxi" class="rank-page-taxi-details-image__img">
+                            <img src="IMG/icon-taxi.png" alt="Taxi" style="display : block;" class="rank-page-taxi-details-image__img">
+                            <span class="rank-page-taxi-details__text--value rank-page-taxi-details__text" >${taxiDrivers[i].dNumberPlate}</span>
                         </div>
                         <div class="rank-page-taxi-details-distance">
                             <p class="rank-page-taxi-details__text">

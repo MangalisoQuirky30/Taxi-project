@@ -15,6 +15,8 @@ function UI(){
         dTripDetailsCont : document.querySelector(".driver-bookings") ,
         headingText : document.querySelector(".heading-text-t") ,
 
+        driverDPMob : document.querySelector(".driver-dp") ,
+
         
         dLogoutBtnMob : document.getElementById("logout-driver-mobile") ,
         dLogoutBtn : document.getElementById("logout-driver") , 
@@ -33,7 +35,6 @@ function UI(){
         page : document.getElementById('page') ,
         menuContainer :  document.querySelector(".home-navigation-content") ,
         
-        driverDP : document.querySelector(".driver-dp") ,
         routeUpdates : document.querySelector(".route-updates") ,
 
         driverUpdatesForm : document.getElementById("driver-updates") ,

@@ -38,7 +38,7 @@ User.prototype = {
         selectors.driverBtn.style.display = "none" ;
         selectors.passengerBtn.style.display = "none" ;
         selectors.logoCont.style.width = "300px"
-        selectors.logoPage.style.height = "50vh" ;
+        selectors.logoPage.style.height = "35vh" ;
         selectors.logoPage.style.backgroundImage = "linear-gradient(to top, white 15% , white 15% )" ;
         selectors.logoPageCont.style.paddingTop  = "2.5vh" ;
         selectors.formSection.style.transform  = " translateY(-98px)" ;
@@ -285,24 +285,30 @@ User.prototype = {
         
         if(this.errors.length == 0){
             if(exstPass != null){
-                var currentPass = exstPass.filter(function(pass){
+                var currentPass = exstPass.find(function(pass){
                     if(pass.pEmail == passDetails.pLoginEmail){
                         console.log(pass);
                         return pass
                         
                     }
                 })
-                console.log(currentPass);
-                var passngr = currentPass[0]
-                if(passngr.pEmail == passDetails.pLoginEmail && passngr.pPass == passDetails.pLoginPass){
-                    selectors.pLoginEmail.value = ""
-                    selectors.pLoginPass.value = ""
-                    var date = new Date();
-                    var token = date.getTime() ;
-                    localStorage.setItem('ptoken' , JSON.stringify(token)) 
-                    var uri = encodeURIComponent(passngr.pName)
-                    var uri2 = encodeURIComponent(passngr.pEmail)
-                   window.location.href = `passenger/home.html` + "?" + uri + "?" + uri2;
+              
+               
+                if(currentPass){
+                    console.log(currentPass);
+                    var passngr = currentPass
+                    if( passngr.pEmail == passDetails.pLoginEmail && passngr.pPass == passDetails.pLoginPass){
+                        selectors.pLoginEmail.value = ""
+                        selectors.pLoginPass.value = ""
+                        var date = new Date();
+                        var token = date.getTime() ;
+                        localStorage.setItem('ptoken' , JSON.stringify(token)) 
+                        var uri = encodeURIComponent(passngr.pName)
+                        var uri2 = encodeURIComponent(passngr.pEmail)
+                       window.location.href = `passenger/home.html` + "?" + uri + "?" + uri2;
+                    }else {
+                        selectors.errorsPSI.innerHTML = '<li>Invalid login details</li>'
+                    }
                 }else {
                     selectors.errorsPSI.innerHTML = '<li>Invalid login details</li>'
                 }
@@ -384,3 +390,76 @@ User.prototype = {
     
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // CHATROOM
+// function User(name){
+//     this.name = name;
+//     this.chatroom = null
+//     this.send = function(msg, to){
+//         this.chatroom.send(msg, this, to)
+//     }
+//     this.receive = function(msg, from){
+//         console.log(from.name + ': ' + msg)
+//     }
+// }
+
+
+
+// function Chatroom(){
+//     var users = {}
+//     this.register = function(user){
+//         users[user.name] = user
+//         user.chatroom = this
+//     }
+
+//     this.send = function(msg, from, to){
+//         if(to){
+//             //send to single user
+//             to.receive(msg, from)
+//         }else{
+//             //sending to all users in the chatroom
+//             for(var key in users){
+//                 if(users[key] !== from){
+//                     users[key].receive(msg, from)
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// var ayanda = new User('ayanda')
+// var sizwe = new User('sizwe')
+// var abongile = new User('abongile')
+// var chatroom = new Chatroom()
+
+// chatroom.register(ayanda)
+// chatroom.register(sizwe)
+// chatroom.register(abongile)
+
+// ayanda.send('hello', sizwe)
+// sizwe.send('hi, my collegue', ayanda)
+// abongile.send('hey shut up guys I wanna be focused with this JS course')
+// ayanda.send('sizwe did you get abongile nonsense', sizwe)
